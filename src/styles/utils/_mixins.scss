@@ -1,0 +1,92 @@
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query));
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+/// Sizing helper
+/// @access public
+/// @param {Length} $width - Width
+/// @param {Length} $height [$width] - Height
+/// https://github.com/gillesbertaux/andy/blob/master/andy.scss
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Smart visually-hidden
+// https://css-tricks.com/snippets/sass/extend-wrapper-aka-mixtend/
+@mixin visually-hidden($extend: true) {
+  @if $extend {
+    @extend %visually-hidden;
+  } @else {
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-indent: 210%;
+
+  }
+}
+
+%visually-hidden {
+  @include  visually-hidden($extend: false);
+}
+
+
+// Smart clearfix
+// https://css-tricks.com/snippets/sass/extend-wrapper-aka-mixtend/
+@mixin clearfix($extend: true) {
+  @if $extend {
+    @extend %clearfix;
+  } @else {
+    &:after {
+      display: table;
+      clear: both;
+
+      content: '';
+    }
+  }
+}
+
+%clearfix {
+  @include clearfix($extend: false);
+}
+
+/// Make diferents versions of background image
+/// @access public
+/// @param {String} $file - Image's path
+/// @param {String} $background-size - background size
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+$fallback-extension: 'png' !default;
+$is-hidpi:" (-webkit-min-device-pixel-ratio: 1.5),
+            (min--moz-device-pixel-ratio: 1.5),
+            (-o-min-device-pixel-ratio: 3/2),
+            (min-device-pixel-ratio: 1.5),
+            (min-resolution: 1.5dppx)";
+@mixin background-image ($file, $size: false){
+  background-image: url(#{$file}.svg);
+  @if ($size) {
+    background-size: $size;
+  }
+  .no-svg & {
+    background-image: url(#{$file}.#{$fallback-extension});
+
+    @media #{$is-hidpi} {
+      background-image: url(#{$file}@2x.#{$fallback-extension});
+    }
+  }
+}

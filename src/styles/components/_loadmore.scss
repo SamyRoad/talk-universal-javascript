@@ -1,0 +1,26 @@
+.load-more {
+  $load-more__color: #34b6e8;
+
+  margin: 2em auto;
+
+  text-align: center;
+  &__button {
+    font-family: $number-font;
+    font-size: 0.75em; // 12 / 16
+    font-weight: 600;
+
+    padding: 1em 1.25em; // 20 / 16
+
+    transition: all .25s ease-out;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: $load-more__color;
+    border: 1px solid $load-more__color;
+    border-radius: 2px;
+    &:hover {
+      color: white;
+      background-color: $load-more__color;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  z-index: 2;
+
+  width: 100%;
+  padding: 1em 0;
+
+  border-bottom: 1px solid #ededed;
+  background-color: white;
+  box-shadow: 0 0 2px #ededed;
+
+  text-align: center;
+
+  &__logo {
+    margin-top: 0;
+    margin-bottom: 0;
+    a {
+      @include background-image('../public/images/logo', cover);
+
+      display: inline-block;
+
+      width: 157px;
+      height: 20px;
+    }
+    img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.icon {
+  @extend %visually-hidden;
+  @include size(2em); // 32 / 16
+
+  display: inline-block;
+
+  background-size: cover;
+
+  &--like {
+    @include background-image('../public/images/icons/icon_like');
+  }
+  .is-liked &--like {
+    @include background-image('../public/images/icons/icon_like_active');
+  }
+  &--encapsulate {
+    @include background-image('../public/images/icons/icon_repost');
+  }
+  &--options {
+    @include background-image('../public/images/icons/icon_options');
+  }
+  &--search {
+    @include background-image('../public/images/icons/icon_search');
+  }
+  &--close {
+    @include background-image('../public/images/icons/icon_close');
+  }
+
+  /**
+   * Sizes
+   */
+  &--small {
+    @include size(1em); // 16 / 16
+  }
+}

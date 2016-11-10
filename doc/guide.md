@@ -13,3 +13,5 @@ Module Replacement (HMR)"** gracias a **Webpack**.
 ```
 npm run start:dev-server
 ```
+
+## Paso 3 - Estilos y imagenes

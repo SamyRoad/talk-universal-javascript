@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>5-assets/icon_repost</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2-screenshots/uielements-12cols" sketch:type="MSArtboardGroup" transform="translate(-189.000000, -752.000000)" fill="#CBC9C9">
+            <g id=".icons__actions" sketch:type="MSLayerGroup" transform="translate(33.000000, 704.000000)">
+                <g id="icons/.icon--encapsule" transform="translate(159.000000, 52.000000)" sketch:type="MSShapeGroup">
+                    <path d="M21.0744006,19.8452216 C18.8746261,22.3898835 15.6235265,24 11.9964746,24 C5.37100461,24 2.84217094e-14,18.627417 2.84217094e-14,12 C2.84217094e-14,5.372583 5.37100461,0 11.9964746,0 C18.6219445,0 23.9929491,5.372583 23.9929491,12 L19.9941243,12 C19.9941243,7.581722 16.4134545,4 11.9964746,4 C7.57949459,4 3.99882485,7.581722 3.99882485,12 C3.99882485,16.418278 7.57949459,20 11.9964746,20 C14.4127335,20 16.5787255,18.9281649 18.0451933,17.233884 L21.0744006,19.8452216 L21.0744006,19.8452216 Z M18,12 L26,12 L22,17 L18,12 Z" id=".item__actions__icon--encapsule" transform="translate(13.000000, 12.000000) scale(-1, 1) translate(-13.000000, -12.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

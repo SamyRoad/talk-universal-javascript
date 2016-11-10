@@ -1,0 +1,26 @@
+$susy: (
+  columns: 12,
+  gutters: .25
+);
+
+%containter {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 31.25em; // 500 / 16
+
+  @include respond-to('small'){
+    max-width: 62.5em; // 1000 / 16
+    width: 90%;
+  }
+
+  @include respond-to('large'){
+    width: 95%;
+    max-width: 87.5em; // 1400 / 16
+  }
+}
+
+.item-grid {
+  @extend %containter;
+  padding-top: 4.5em; // 72 / 16
+}

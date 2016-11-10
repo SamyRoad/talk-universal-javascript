@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>5-assets/icon_close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2-screenshots/uielements-12cols" sketch:type="MSArtboardGroup" transform="translate(-239.000000, -760.000000)" fill="#FFFFFF">
+            <path d="M246.058824,768 L239,775.058824 L239.941176,776 L247,768.941176 L254.058824,776 L255,775.058824 L247.941176,768 L255,760.941176 L254.058824,760 L247,767.058824 L239.941176,760 L239,760.941176 L246.058824,768 L246.058824,768 Z" id="5-assets/close_buttom" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

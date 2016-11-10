@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>5-assets/icon_options</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2-screenshots/uielements-12cols" sketch:type="MSArtboardGroup" transform="translate(-33.000000, -752.000000)" fill="#CBC9C9">
+            <g id=".icons__actions" sketch:type="MSLayerGroup" transform="translate(33.000000, 704.000000)">
+                <g id="icons/.icon--options" transform="translate(0.000000, 60.000000)" sketch:type="MSShapeGroup">
+                    <path d="M4,8 C6.209139,8 8,6.209139 8,4 C8,1.790861 6.209139,0 4,0 C1.790861,0 0,1.790861 0,4 C0,6.209139 1.790861,8 4,8 Z M16,8 C18.209139,8 20,6.209139 20,4 C20,1.790861 18.209139,0 16,0 C13.790861,0 12,1.790861 12,4 C12,6.209139 13.790861,8 16,8 Z M28,8 C30.209139,8 32,6.209139 32,4 C32,1.790861 30.209139,0 28,0 C25.790861,0 24,1.790861 24,4 C24,6.209139 25.790861,8 28,8 Z" id=".item__actions__actions--more-actions"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

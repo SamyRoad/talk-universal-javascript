@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3 (11970) - http://www.bohemiancoding.com/sketch -->
+    <title>5-assets/icon_like</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="2-screenshots/uielements-12cols" sketch:type="MSArtboardGroup" transform="translate(-85.000000, -752.000000)" fill="#CAC9C9">
+            <g id=".icons__actions" sketch:type="MSLayerGroup" transform="translate(33.000000, 704.000000)">
+                <g id="icons/.icon--like" transform="translate(55.000000, 52.000000)" sketch:type="MSShapeGroup">
+                    <path d="M0.195809237,8.48500292 C0.0678190035,7.96570858 -7.10542736e-15,7.42336922 -7.10542736e-15,6.86548846 C-7.10542736e-15,6.84898363 5.9359575e-05,6.8324924 0.000177880689,6.81601497 C-0.00221637255,6.50096763 0.0202032763,6.3027963 0.0286859637,6.2396118 C0.350909342,2.74122881 3.34787267,0 6.99738438,0 C9.54764252,0 11.7792525,1.5103131 13.0021803,3.51392465 C14.2260476,1.51370587 16.4553856,0 19.0026156,0 C22.7725541,0 25.8461679,2.925124 25.9944023,6.58833317 C25.997932,6.65599472 26.0003916,6.73958085 25.9999484,6.83883735 C25.9999828,6.84771709 26,6.8566008 26,6.86548846 C26,7.44807112 25.9260422,8.01370562 25.786836,8.55384682 C25.5801487,9.4917484 25.1829899,10.7210273 24.4342331,12.2193339 C20.6288891,19.8340529 14.2537891,24.0000009 13,24 C11.7462109,23.9999991 5.85185546,19.6497327 1.59097262,12.0618946 C0.805811443,10.663669 0.40022253,9.44357957 0.195809237,8.48500292 Z" id=".item__actions__icon--like-copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+/// Breakpoints
+/// @type Map
+$breakpoints: (
+  'small'  : ( min-width:  767px ),
+  // 'medium' : ( min-width:  992px ),
+  'large'  : ( min-width: 1200px ),
+) !default;
+
+/// Main font stack for titles
+/// @type List
+$title-font: 'Raleway', sans-serif;
+
+/// Main font stack for text
+/// @type List
+$text-font: 'Droid serif', serif;
+
+/// Main font stack for number
+/// @type List
+$number-font: 'Open Sans', sans-serif;
+
+/// Spinkit Config
+$spinkit-size: 1.25em; // 20 / 16
+$spinkit-spinner-margin: $spinkit-size auto;
+$spinkit-spinner-color: #c9c9c9;
