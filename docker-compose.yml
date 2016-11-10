@@ -2,7 +2,8 @@ codemotion:
   build: .
   container_name: universal-javascript
   volumes:
-    - .:/home/codemotion/app
+    - .:/home/codemotion/universal-javascript
+    - /home/codemotion/universal-javascript/node_modules
   ports:
     - '3000:3000'
     - '3001:3001'

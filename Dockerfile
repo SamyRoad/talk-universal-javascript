@@ -4,25 +4,27 @@ EXPOSE 3000
 EXPOSE 3001
 EXPOSE 4000
 
-# install dependencies
+# Install dependencies
 RUN apt-get update -qq && apt-get install -y \
     git \
-    build-essential \
-  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+# build-essential \
+  && apt-get clean \
 
   # Add 'codemotion' user which will run the application
   && adduser codemotion --home /home/codemotion --shell /bin/bash --disabled-password --gecos ""
 
-ADD package.json /tmp/package.json
+ENV HOME=/home/codemotion
 
-RUN cd /tmp \
-  && npm install -g \
-  && rm -rf /tmp/*
+COPY package.json $HOME/universal-javascript/
+RUN chown -R codemotion:codemotion $HOME/*
 
-# Add application source to the image and own it all by codemotion:codemotion.
-RUN mkdir /home/codemotion/app && chown -R codemotion:codemotion /home/codemotion/app
-
-WORKDIR /home/codemotion/app
 USER codemotion
+WORKDIR $HOME/universal-javascript
+RUN npm install
 
+USER root
+COPY . $HOME/universal-javascript
+RUN chown -R codemotion:codemotion $HOME/*
+
+USER codemotion
 CMD ["npm", "start"]
