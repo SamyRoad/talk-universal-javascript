@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/no-unused-prop-types": [
+      "error",
+      {
+        "customValidators": [],
+        "skipShapeProps": true
+      }
+    ],
+  }
+}
