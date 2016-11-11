@@ -101,3 +101,11 @@ Cuando se crea un reducer se tiene que tener en cuenta:
 ### Store redux
 
 Un `store` guarda el **estado único** de la aplicación y **lanza las acciones**. Une las actions y los reducers.
+
+## Paso 9 - Leer los items usando Redux
+
+Implementación de leer items usando `redux-thunk` para **crear una acción que devuelve una función** que lanza acciones de
+**Redux**.
+
+Para poder utilizar `redux-thunk` en **Redux**, es necesario **modificar el store definido en el cliente**, para aplicar el
+middleware de `redux-thunk`, además de utilizar el **Provider** de `redux-react`.

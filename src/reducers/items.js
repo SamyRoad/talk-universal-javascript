@@ -19,6 +19,10 @@ const items = (state = [], action) => {
   switch (action.type) {
     case 'TOGGLE_LIKE':
       return state.map(i => item(i, action));
+    case 'RECEIVE_ITEMS':
+      return [
+        ...action.items,
+      ];
     default:
       return state;
   }

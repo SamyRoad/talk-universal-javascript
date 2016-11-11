@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import App from '../components/App';
 import ItemList from '../components/ItemList';
-import { toggleLike } from '../actions/items';
+import { toggleLike, fetchItems } from '../actions/items';
 
 const propTypes = {
   items: PropTypes.array,
@@ -18,6 +18,12 @@ class Home extends Component {
     super(props);
 
     this.handleItemLikeClick = this.handleItemLikeClick.bind(this);
+  }
+
+  componentDidMount() {
+    const { dispatch } = this.props;
+
+    dispatch(fetchItems());
   }
 
   handleItemLikeClick(item) {
