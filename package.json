@@ -4,6 +4,8 @@
   "description": "Codemotion 2016 - Universal JavaScript workshop code",
   "scripts": {
     "start:dev-server": "babel-node dev-server.js",
+    "start:app-server": "babel-watch src/server/index.js",
+    "start": "npm run start:dev-server & npm run start:app-server",
     "lint": "eslint src --ext js --ext jsx"
   },
   "devDependencies": {
