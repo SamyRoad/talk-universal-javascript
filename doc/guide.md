@@ -72,3 +72,32 @@ Introducimos el resultado en el **estado** del componente y se refrescará (real
 
 Para **comprobar** los que los cambios sobre el estado del `container` de React (Home.jsx) **re-renderizan** los componentes de
 **React**, implementamos la acción de `like` & `unlike`.
+
+## Paso 8 - "Me gusta / No me gusta" con Redux
+
+[Redux](http://redux.js.org/) es una librería inspirada en `Flux` que gestiona el estado de una aplicación en
+JavaScript y puede ser utilizada **en cualquier entorno** (cliente, servidor y nativo).
+
+Hay que detectar las acciones de nuestra aplicación, es este caso:
+
+* Leer items
+* "Me gusta / No me gusta" un ítem
+
+Vamos a empezar a transformar nuestro código a Redux por la funcionalidad de "Me gusta / No me gusta".
+
+### Action redux
+
+Una `action` describe **que un hecho a ocurrido**.
+
+### Reducer redux
+
+Un `reducer` especifica **cómo cambia el estado** de la aplicación cuando se produce una acción.
+
+Cuando se crea un reducer se tiene que tener en cuenta:
+
+* No tiene que mutar el estado
+* Devuelve el estado anterior en el caso por defecto
+
+### Store redux
+
+Un `store` guarda el **estado único** de la aplicación y **lanza las acciones**. Une las actions y los reducers.

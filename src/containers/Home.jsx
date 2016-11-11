@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import App from '../components/App';
 import ItemList from '../components/ItemList';
+import { toggleLike } from '../actions/items';
 
 const propTypes = {
   items: PropTypes.array,
@@ -15,36 +17,17 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      items: props.items,
-    };
-
     this.handleItemLikeClick = this.handleItemLikeClick.bind(this);
   }
 
-  componentDidMount() {
-    fetch('http://localhost:4000/items')
-      .then(response => response.json())
-      .then(items => this.setState({ items }));
-  }
-
   handleItemLikeClick(item) {
-    const { items } = this.state;
+    const { dispatch } = this.props;
 
-    this.setState({
-      items: items.map(i => {
-        if (i.id === item.id) {
-          i.isLiked = !i.isLiked;
-          i.likesCount = i.likesCount + (i.isLiked ? 1 : -1);
-        }
-
-        return i;
-      }),
-    });
+    dispatch(toggleLike(item.id));
   }
 
   render() {
-    const { items } = this.state;
+    const { items } = this.props;
 
     return (
       <App>
@@ -60,4 +43,12 @@ class Home extends Component {
 Home.propTypes = propTypes;
 Home.defaultProps = defaultProps;
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    items: state.items,
+  };
+};
+
+export default connect(
+  mapStateToProps
+)(Home);
