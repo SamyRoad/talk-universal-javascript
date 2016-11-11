@@ -11,6 +11,7 @@ const propTypes = {
     avatarUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
   }),
+  handleLikeClick: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -25,6 +26,7 @@ const Item = ({
   isLiked,
   likesCount,
   author,
+  handleLikeClick,
 }) => (
   <article className="item item--preview">
     <div className="item__content">
@@ -39,6 +41,7 @@ const Item = ({
           item__like: true,
           'is-liked': isLiked,
         })}
+        onClick={handleLikeClick}
       >
         <span className="icon icon--like" /><span className="item__counter">{ ` ${likesCount}` }</span>
       </a>

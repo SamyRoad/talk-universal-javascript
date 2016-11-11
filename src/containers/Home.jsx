@@ -18,12 +18,29 @@ class Home extends Component {
     this.state = {
       items: props.items,
     };
+
+    this.handleItemLikeClick = this.handleItemLikeClick.bind(this);
   }
 
   componentDidMount() {
     fetch('http://localhost:4000/items')
       .then(response => response.json())
       .then(items => this.setState({ items }));
+  }
+
+  handleItemLikeClick(item) {
+    const { items } = this.state;
+
+    this.setState({
+      items: items.map(i => {
+        if (i.id === item.id) {
+          i.isLiked = !i.isLiked;
+          i.likesCount = i.likesCount + (i.isLiked ? 1 : -1);
+        }
+
+        return i;
+      }),
+    });
   }
 
   render() {
@@ -33,6 +50,7 @@ class Home extends Component {
       <App>
         <ItemList
           items={items}
+          handleItemLikeClick={ this.handleItemLikeClick }
         />
       </App>
     );

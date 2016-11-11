@@ -67,3 +67,8 @@ rápida**.
 
 Introducimos el resultado en el **estado** del componente y se refrescará (realiza un `re-render` sobre el DOM virtual) 
   mostrando el **listado de elementos**.
+
+## Paso 7 - Funcionalidad "Me gusta / No me gusta"
+
+Para **comprobar** los que los cambios sobre el estado del `container` de React (Home.jsx) **re-renderizan** los componentes de
+**React**, implementamos la acción de `like` & `unlike`.
