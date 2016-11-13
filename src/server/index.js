@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 
 import App from '../components/App';
 import Home from '../containers/Home';
+import ItemDetail from '../containers/ItemDetail';
 import renderLayout from './layout';
 import configureStore from '../store/configureStore';
 import { fetchItems } from '../actions/items';
@@ -27,6 +28,25 @@ app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
         <Provider store={store}>
           <App>
             <Home />
+          </App>
+        </Provider>
+      );
+
+      res.status(200).send(renderLayout(html, store.getState()));
+    })
+  ;
+});
+
+app.get('/item/:id', (req, res) => {
+  store
+    .dispatch(fetchItems())
+    .then(() => {
+      const html = ReactDOMServer.renderToString(
+        <Provider store={store}>
+          <App>
+            <ItemDetail
+              params={{ id: req.params.id }}
+            />
           </App>
         </Provider>
       );

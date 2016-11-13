@@ -172,3 +172,11 @@ containers.
 A continuación, utilizamos el **componente Router** en `src/client/index.js`.
 
 Y por último, **enlazamos esta nueva ruta** en el componente `Item` utilizando el componente de React Router `Link`.
+
+## Paso 16 - Enrutamiento para el detalle del item en servidor
+
+Lo que hemos hecho es un router que solo funciona a nivel de cliente. Si refrescamos o
+accedemos directamente a la ruta `GET /item/:id` **el servidor nos devolverá un error** porque la ruta no esta implementada
+en el servidor.
+
+Para resolverlo, **implementamos dicha ruta en el servidor**.
