@@ -188,3 +188,10 @@ las opciones de **React Router** para **routing** en **servidor**.
 
 Utilizamos el método `match`, que nos detecta, entre otras cosas, cuál es el **componente** que tiene
 que utilizar para dicha ruta.
+
+## Paso 18 - Implementación de `fetchData` en containers
+
+Implementamos el método `fetchData` para definir **cuales son los datos necesarios** para la carga del **container** en el lado
+del **servidor**.
+
+Se utiliza un `Promise.all` para **devolver el Promise** cuando todos los *Promises* que se ejecutan dentro acaban.

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { toggleLike } from '../actions/items';
+import { toggleLike, fetchItems } from '../actions/items';
 import ItemFullDetail from '../components/ItemDetail';
 
 const propTypes = {
@@ -20,6 +20,12 @@ class ItemDetail extends Component {
     const { dispatch } = this.props;
 
     dispatch(toggleLike(id));
+  }
+
+  static fetchData(dispatch) {
+    return Promise.all([
+      dispatch(fetchItems()),
+    ]);
   }
 
   render() {

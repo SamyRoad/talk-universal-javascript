@@ -26,6 +26,12 @@ class Home extends Component {
     dispatch(toggleLike(item.id));
   }
 
+  static fetchData(dispatch) {
+    return Promise.all([
+      dispatch(fetchItems()),
+    ]);
+  }
+
   render() {
     const { items } = this.props;
 
