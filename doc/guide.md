@@ -132,3 +132,8 @@ Vemos cómo el servidor sí que devuelve el **HTML formado**, pero en cuanto se 
 Para **resolver** el **problema** anterior, tenemos que **compartir el estado** entre cliente y servidor,
 así cuando el cliente construya los componentes **React**, lo hará sobre un store creado a partir de los datos que le ha
 pasado el servidor en `window.__INITIAL_STATE__`.
+
+## Paso 12 - Refactor de la creacion del store
+
+**Modularizamos** la definición del store en `configureStore` para que sea utilizado tanto por el **servidor** como por el
+**cliente**.

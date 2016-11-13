@@ -4,12 +4,11 @@ import path from 'path';
 import fetch from 'isomorphic-fetch';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import Home from '../containers/Home';
-import rootReducer from '../reducers';
 import renderLayout from './layout';
+import configureStore from '../store/configureStore';
 
 const app = express();
 const port = 3000;
@@ -22,7 +21,7 @@ app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
     .then(response => response.json())
     .then((items) => {
       const initialState = { items };
-      const store = createStore(rootReducer, initialState);
+      const store = configureStore(initialState);
 
       const html = ReactDOMServer.renderToString(
         <Provider store={store}>
