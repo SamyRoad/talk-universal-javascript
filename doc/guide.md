@@ -109,3 +109,20 @@ Implementación de leer items usando `redux-thunk` para **crear una acción que 
 
 Para poder utilizar `redux-thunk` en **Redux**, es necesario **modificar el store definido en el cliente**, para aplicar el
 middleware de `redux-thunk`, además de utilizar el **Provider** de `redux-react`.
+
+## Paso 10 - Server rendering
+
+Queremos que el servidor nos devuelva el **HTML** con los items ya formados y no esperar a
+que la petición se resuelva en **cliente**.
+
+Tenemos que renderizar los componentes de **React** en **servidor** gracias a `ReactDOMServer` y el método `renderToString`.
+
+Es **importante** pasar el **estado inicial** al **store** de **Redux** que vamos a utilizar en servidor. Lo creamos y lo
+inicializamos con los ítems que hemos leido.
+
+También debemos permitir que la funcion `renderLayout` reciba el **contenido** que tiene que incorporar
+en el **body del HTML** que va a devolver.
+
+Vemos cómo el servidor sí que devuelve el **HTML formado**, pero en cuanto se ejecuta
+`client/index` para montar los componentes en React, **se elimina el contenido del body** porque el `store` de
+`Redux` en `cliente` se está creando `sin el estado inicial del servidor`.
