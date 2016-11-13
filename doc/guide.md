@@ -180,3 +180,11 @@ accedemos directamente a la ruta `GET /item/:id` **el servidor nos devolverá un
 en el servidor.
 
 Para resolverlo, **implementamos dicha ruta en el servidor**.
+
+## Paso 17 - Usar React Router match en servidor
+
+Para no crear una ruta en servidor y reutilizar el mismo código que en router de cliente, utilizamos
+las opciones de **React Router** para **routing** en **servidor**.
+
+Utilizamos el método `match`, que nos detecta, entre otras cosas, cuál es el **componente** que tiene
+que utilizar para dicha ruta.

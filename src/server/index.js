@@ -4,13 +4,12 @@ import path from 'path';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
+import { match, RouterContext } from 'react-router';
 
-import App from '../components/App';
-import Home from '../containers/Home';
-import ItemDetail from '../containers/ItemDetail';
 import renderLayout from './layout';
 import configureStore from '../store/configureStore';
 import { fetchItems } from '../actions/items';
+import routes from '../routes';
 
 const app = express();
 const port = 3000;
@@ -20,41 +19,27 @@ app.use('/scripts', express.static(path.resolve('src/public/scripts')));
 
 const store = configureStore();
 
-app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
-  store
-    .dispatch(fetchItems())
-    .then(() => {
-      const html = ReactDOMServer.renderToString(
-        <Provider store={store}>
-          <App>
-            <Home />
-          </App>
-        </Provider>
-      );
+app.use((req, res, next) =>
+  match({ routes, location: req.url }, (error, redirectLocation, props) => {
+    if (error) {
+      next(error);
+    }
 
-      res.status(200).send(renderLayout(html, store.getState()));
-    })
-  ;
-});
+    store
+      .dispatch(fetchItems())
+      .then(() => {
+        const html = ReactDOMServer.renderToString(
+          <Provider store={store}>
+            <RouterContext {...props} />
+          </Provider>
+        );
 
-app.get('/item/:id', (req, res) => {
-  store
-    .dispatch(fetchItems())
-    .then(() => {
-      const html = ReactDOMServer.renderToString(
-        <Provider store={store}>
-          <App>
-            <ItemDetail
-              params={{ id: req.params.id }}
-            />
-          </App>
-        </Provider>
-      );
-
-      res.status(200).send(renderLayout(html, store.getState()));
-    })
-  ;
-});
+        res.status(200).send(renderLayout(html, store.getState()));
+      })
+      .catch(errorDispatch => next(errorDispatch))
+    ;
+  })
+);
 
 app.use((error, req, res, next) => { // eslint-disable-line no-unused-vars
   console.log(error); // eslint-disable-line no-console
