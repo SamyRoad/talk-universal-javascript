@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import fetch from 'isomorphic-fetch';
 
 export const toggleLike = id => ({
   type: 'TOGGLE_LIKE',

@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import express from 'express';
 import path from 'path';
-import fetch from 'isomorphic-fetch';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
@@ -9,6 +8,7 @@ import { Provider } from 'react-redux';
 import Home from '../containers/Home';
 import renderLayout from './layout';
 import configureStore from '../store/configureStore';
+import { fetchItems } from '../actions/items';
 
 const app = express();
 const port = 3000;
@@ -16,20 +16,19 @@ const port = 3000;
 app.use('/images', express.static(path.resolve('src/public/images')));
 app.use('/scripts', express.static(path.resolve('src/public/scripts')));
 
-app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
-  fetch('http://localhost:4000/items')
-    .then(response => response.json())
-    .then((items) => {
-      const initialState = { items };
-      const store = configureStore(initialState);
+const store = configureStore();
 
+app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
+  store
+    .dispatch(fetchItems())
+    .then(() => {
       const html = ReactDOMServer.renderToString(
         <Provider store={store}>
           <Home />
         </Provider>
       );
 
-      res.status(200).send(renderLayout(html, initialState));
+      res.status(200).send(renderLayout(html, store.getState()));
     })
   ;
 });
