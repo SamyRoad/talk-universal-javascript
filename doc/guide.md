@@ -60,3 +60,10 @@ datos ficticios o utilizar librerías de terceros.
 Nosotros utilizaremos
 [json-server](https://github.com/typicode/json-server) para construirnos un API de datos ficticios de **manera muy
 rápida**.
+
+## Paso 6 - Leer los datos del API desde el componente React y guardar en estado
+
+**Leemos los datos** desde el método `componentDidMount` que se ejecuta en el momento que se monte el componente.
+
+Introducimos el resultado en el **estado** del componente y se refrescará (realiza un `re-render` sobre el DOM virtual) 
+  mostrando el **listado de elementos**.
