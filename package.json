@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Codemotion 2016 - Universal JavaScript workshop code",
   "scripts": {
+    "start:api": "json-server --watch config/json-server/db.js --port 4000",
     "start:dev-server": "babel-node dev-server.js",
     "start:app-server": "babel-watch src/server/index.js",
-    "start": "npm run start:dev-server & npm run start:app-server",
+    "start": "npm run start:api & npm run start:dev-server & npm run start:app-server",
     "lint": "eslint src --ext js --ext jsx"
   },
   "devDependencies": {

@@ -51,3 +51,12 @@ propiedades.
 
 En cambio, los `containers` los hemos definido utilizando **clases** de **JavaScript** porque definen **cómo va a
 funcionar la aplicación** haciéndonos implementar métodos del ciclo de vida de **React** como por ejemplo `componentDidMount`.
+
+## Paso 5 - Simular API con `json-server`
+
+Para simular el comportamiento de un **API real con datos ficticios**, podemos montarnos nuestro propia aplicación que devuelva
+datos ficticios o utilizar librerías de terceros.
+
+Nosotros utilizaremos
+[json-server](https://github.com/typicode/json-server) para construirnos un API de datos ficticios de **manera muy
+rápida**.
