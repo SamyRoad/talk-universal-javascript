@@ -154,3 +154,9 @@ Definimos el store `sin estado inicial` y cuando recibimos el *request* `GET /`,
 
 Como este método devuelve un **Promise**, cuando este se halla completado, renderizamos los
 componentes de **React** con el estado que contiene el store (el estado ha sido modificado por el dispatch de `fetchItems`).
+
+## Paso 14 - Vista detalle de ítem
+
+Ahora queremos crear la `vista detalle` de un item en `GET /item/:id`.
+
+Creamos un nuevo **container** (componente de React) que visualice el contenido del detalle de un ñítem.
