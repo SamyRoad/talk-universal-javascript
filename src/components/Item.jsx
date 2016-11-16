@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router';
 
 const propTypes = {
   id: PropTypes.number.isRequired,
@@ -30,7 +31,9 @@ const Item = ({
 }) => (
   <article className="item item--preview">
     <div className="item__content">
-      <img src={imageUrl} alt="" className="item__image" />
+      <Link to={`/item/${id}`}>
+        <img src={imageUrl} alt="" className="item__image" />
+      </Link>
     </div>
 
     <div className="item__actions">
