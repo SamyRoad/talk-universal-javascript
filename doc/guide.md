@@ -160,3 +160,15 @@ componentes de **React** con el estado que contiene el store (el estado ha sido 
 Ahora queremos crear la `vista detalle` de un item en `GET /item/:id`.
 
 Creamos un nuevo **container** (componente de React) que visualice el contenido del detalle de un ñítem.
+
+## Paso 15 - Enrutamiento vista detalle de ítem
+
+Utilizamos la librería que nos permita enrutar en el cliente. En este caso, hemos utilizado
+[React Router](https://github.com/ReactTraining/react-router).
+
+Para **configurar** esta librería, creamos el fichero `src/routes.jsx`, donde se define qué rutas corresponden con qué
+containers.
+
+A continuación, utilizamos el **componente Router** en `src/client/index.js`.
+
+Y por último, **enlazamos esta nueva ruta** en el componente `Item` utilizando el componente de React Router `Link`.
