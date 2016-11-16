@@ -1,4 +1,4 @@
-export default function renderLayout(html) {
+export default function renderLayout(html, initialState) {
   const styles = [
   ];
 
@@ -20,6 +20,10 @@ export default function renderLayout(html) {
       <body>
 
         <div id="root">${html}</div>
+
+        <script>
+          window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}
+        </script>
 
         ${scripts.map(script => `<script src="${script}"></script>`).join('')}
       </body>

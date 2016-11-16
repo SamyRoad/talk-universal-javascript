@@ -30,7 +30,7 @@ app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
         </Provider>
       );
 
-      res.status(200).send(renderLayout(html));
+      res.status(200).send(renderLayout(html, initialState));
     })
   ;
 });

@@ -20,12 +20,6 @@ class Home extends Component {
     this.handleItemLikeClick = this.handleItemLikeClick.bind(this);
   }
 
-  componentDidMount() {
-    const { dispatch } = this.props;
-
-    dispatch(fetchItems());
-  }
-
   handleItemLikeClick(item) {
     const { dispatch } = this.props;
 

@@ -126,3 +126,9 @@ en el **body del HTML** que va a devolver.
 Vemos cómo el servidor sí que devuelve el **HTML formado**, pero en cuanto se ejecuta
 `client/index` para montar los componentes en React, **se elimina el contenido del body** porque el `store` de
 `Redux` en `cliente` se está creando `sin el estado inicial del servidor`.
+
+## Paso 11 - Server rendering compartiendo el estado entre servidor y cliente
+
+Para **resolver** el **problema** anterior, tenemos que **compartir el estado** entre cliente y servidor,
+así cuando el cliente construya los componentes **React**, lo hará sobre un store creado a partir de los datos que le ha
+pasado el servidor en `window.__INITIAL_STATE__`.
