@@ -1,4 +1,4 @@
-export default function renderLayout() {
+export default function renderLayout(html) {
   const styles = [
   ];
 
@@ -19,7 +19,7 @@ export default function renderLayout() {
       </head>
       <body>
 
-        <div id="root"></div>
+        <div id="root">${html}</div>
 
         ${scripts.map(script => `<script src="${script}"></script>`).join('')}
       </body>
