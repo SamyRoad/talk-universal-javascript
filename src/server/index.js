@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
 
+import App from '../components/App';
 import Home from '../containers/Home';
 import renderLayout from './layout';
 import configureStore from '../store/configureStore';
@@ -24,7 +25,9 @@ app.get('/', (req, res) => { // eslint-disable-line no-unused-vars
     .then(() => {
       const html = ReactDOMServer.renderToString(
         <Provider store={store}>
-          <Home />
+          <App>
+            <Home />
+          </App>
         </Provider>
       );
 

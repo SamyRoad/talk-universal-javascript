@@ -4,9 +4,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
 
-import Home from '../containers/Home';
 import configureStore from '../store/configureStore';
+import routes from '../routes';
 
 require('../styles/main.scss');
 
@@ -14,7 +15,10 @@ const store = configureStore(window.__INITIAL_STATE__);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Home />
+    <Router
+      routes={routes}
+      history={browserHistory}
+    />
   </Provider>,
   document.getElementById('root')
 );

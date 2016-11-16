@@ -30,12 +30,10 @@ class Home extends Component {
     const { items } = this.props;
 
     return (
-      <App>
-        <ItemList
-          items={items}
-          handleItemLikeClick={ this.handleItemLikeClick }
-        />
-      </App>
+      <ItemList
+        items={items}
+        handleItemLikeClick={ this.handleItemLikeClick }
+      />
     );
   }
 }
