@@ -42,6 +42,54 @@ Una vez generada la imagen de docker, para arrancar la aplicación:
 docker-compose up
 ```
 
+### Alternativa 1 (**recomendada para CodeMotion Madrid 2016**)
+
+1- Configurar docker de la siguiente manera:
+
+```
+DOCKER_OPTS="--registry-mirror http://10.60.32.11:8082 --insecure-registry http://10.60.32.11:8082"
+```
+
+Esto se configura de distinta manera dependiendo de la distribución que estes usando:
+
+* [Documentación oficial](https://docs.docker.com/engine/admin/) 
+* [Mac OSX](http://stackoverflow.com/questions/32808215/where-to-set-the-insecure-registry-flag-on-mac-os)
+
+2- Cargar la imagen de docker
+
+```
+docker pull javiacei/universal-javascript
+docker tag <IMAGE ID> talkuniversaljavascript_codemotion
+```
+
+NOTA: <IMAGE ID> es el id de la imagen cargada. Para verlo ejecutar el comando `docker images`.
+
+3- Descargar el proyecto desde `github`
+
+```
+git clone https://github.com/SamyRoad/talk-universal-javascript.git
+```
+
+4-  Para ejecutar la aplicación (desde dentro del proyecto)
+
+```
+docker-compose up
+```
+
+### Alternativa 2
+
+1- Descargar el contenido de https://drive.google.com/open?id=0B9nhRopEuxcbTl84WHVkdTV1WXM
+
+2- Cargar la imagen de docker
+
+```
+docker load -i docker-image
+```
+
+3- Descomprimir `talk-universal-javascript.zip`
+
+4- Acceder a la carpeta donde se ha descomprimido el `zip` y ejecutar `docker-compose up` para ejecutar la aplicación.
+
 ## Uso
 
 El navegador **recomendado** es **Google Chrome**.
