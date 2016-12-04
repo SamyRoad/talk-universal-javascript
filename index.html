@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, speaker-scalable=no">
+
+		<title>Universal APP</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/boton.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atom-one-dark.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Hola</h1>
+					</section>
+					<section>
+						<div>
+							<div class="speaker">
+							<img src="images/boton.jpg" class="speaker-avatar" />
+<pre class="speaker-data"><code>export default {
+  fullName: "Jorge González",
+  twitter: "@boton",
+  linkedIn: "http://linkedin.com/in/boton"
+};</code></pre>
+							</div>
+							<div class="speaker">
+								<img src="images/javiacei.jpg" class="speaker-avatar" />
+<pre class="speaker-data"><code>export default {
+  fullName: "Fco Javier Aceituno",
+  twitter: "@javiacei",
+  linkedIn: "http://linkedin.com/in/javiacei"
+};</code></pre>
+							</div>
+						</div>
+					</section>
+				<section>
+					<img src="images/samyroad.svg" width="33%" />
+				</section>
+				</section>
+				<section>
+					<section>
+						<h1>Problemas</h1>
+					</section>
+					<section class="u-ligth-color" data-background="images/gifs/notmobile.gif">
+						<h2>No estaba optimizada para móviles</h2>
+					</section>
+					<section class="u-ligth-color" data-background="images/gifs/monolito.gif">
+						<h2>El monolito</h2>
+					</section>
+					<section class="u-ligth-color" data-background="images/rails-assets.jpg">
+						<h2>Rails Assets Pipeline</h2>
+					</section>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Requisitos</h1>
+					</section>
+					<section>
+						<ul>
+							<li>Front y Back desacoplado</li>
+							<li class="fragment">Server Rendering</li>
+							<li class="fragment">Código Modular</li>
+							<li class="fragment">SEO</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Solución:</h1>
+						<h2>Aplicación universal</h2>
+					</section>
+					<section data-background-color="#fff">
+						<a href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/">
+							<img src="images/isomorphic.png" width="50%" />
+						</a>
+					</section>
+					<section data-background-color="#fff">
+						<a href="http:/rendrjs.github.io/">
+							<img src="images/rendr-airbnb.png" width="33%" />
+						</a>
+					</section>
+					<section data-background-color="#f4f4f4">
+						<a href="http://backbonejs.org/">
+							<img src="images/backbone.svg" width="33%" />
+						</a>
+					</section>
+					<section data-background-color="#fff">
+						<img src="images/two-way-binding.png" width="50%" />
+					</section>
+					<section data-background-color="#61dafb">
+						<a href="https://facebook.github.io/react">
+							<img src="images/react.svg" width="33%" />
+						</a>
+					</section>
+					<section data-background-color="#61dafb">
+						<h3>Librería para construir interfaces de usuario</h3>
+						<ul>
+							<li class="fragment">Server Rendering</li>
+							<li class="fragment">Componentes (Modularidad)</li>
+							<li class="fragment">JSX</li>
+							<li class="fragment">Virtual DOM</li>
+						</ul>
+					</section>
+					<!-- <section data-background-color="#fff"><img src="images/react-trees.png" width="66%" /></section> -->
+				</section>
+				<section>
+					<section>
+						<h1>Herramientas</h1>
+					</section>
+					<section data-background-color="#2a333c">
+						<a href="http://www.npmjs.com">
+							<img src="images/npm.svg" width="33%" />
+						</a>
+					</section>
+					<section data-background-color="#fff">
+						<a href="https://webpack.github.io">
+							<img src="images/webpack.svg" width="33%" />
+						</a>
+					</section>
+					<section data-background-color="#f5da55">
+						<a href="https://babeljs.io">
+							<img src="images/babel-black.svg" width="80%" />
+						</a>
+					</section>
+				</section>
+				<section class="u-ligth-color" data-background="images/gifs/cat-code.gif">
+					<h1>A picar!</h1>
+				</section>
+				<section data-background-color="#fafafa">
+					<section>
+						<a href="http://redux.js.org">
+							<img src="images/redux.svg" width="33%" />
+						</a>
+					</section>
+					<section>
+						<h3>Redux es un contenedor predecible del estado de aplicaciones JavaScript.</h3>
+					</section>
+					<section>
+						<h3>Redux se inspiró en muchas de las cualidades importantes de Flux.</h3>
+					</section>
+					<section><img src="images/flux.png" width="50%" /></section>
+					<section>
+						<h3>Se basa en 3 principios</h3>
+					</section>
+					<section>
+						<ul>
+							<li>Única fuente de la verdad</li>
+							<li class="fragment">El estado es de solo lectura</li>
+							<li class="fragment">Los cambios se realizan con funciones puras</li>
+						</ul>
+					</section>
+				</section>
+				<section class="u-ligth-color" data-background="images/gifs/cat-code.gif">
+					<h1>A picar!</h1>
+				</section>
+				<section data-background-color="#fff">
+					<section>
+						<a href="https://github.com/ReactTraining/react-router">
+							<img src="images/react-router.png" width="33%" />
+						</a>
+					</section>
+					<section>
+						<h3>Mantiene sincronizada tu UI con la URL</h3>
+					</section>
+					<section>
+						<h3>Está inspirado en el router de Ember</h3>
+					</section>
+					<section>
+						<ul>
+							<li>Rutas anidadas</li>
+							<li class="fragment">Router en el contexto de React</li>
+							<li class="fragment">Inyecta propiedades (location, params, children ...)</li>
+							<li class="fragment">Funciona en node</li>
+						</ul>
+					</section>
+				</section>
+				<section class="u-ligth-color" data-background="images/gifs/cat-code.gif">
+					<h1>A picar!</h1>
+				</section>
+				<section class="u-ligth-color" data-background="images/gifs/qa.gif">
+					<h1>Preguntas?</h1>
+				</section>
+				<section>
+					<h1>Gracias!</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+/**
+ * Solarized Dark theme for reveal.js.
+ * Author: Achim Staebler
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/leaguespartan-bold/leaguespartan-bold.css);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
+
+// Solarized colors
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+$black: #333;
+$pink: #ff0071;
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $base1;
+$headingColor: $black;
+$headingTextShadow: none;
+$backgroundColor: #04f0ff;
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: $magenta;
+$mainFont: 'Libre Baskerville', serif;
+$headingFont: 'League Spartan', sans-serif;
+$heading1Size: 2.77em;
+$heading2Size: 2em;
+$linkColor: $pink;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.u-ligth-color {
+	h1,
+	h2 {
+		color: #fdfbf6 !important;
+	}
+}
+
+.u-vam {
+	vertical-align: middle;
+}
+.reveal {
+	color: $black;
+
+	.progress {
+		top: 0;
+		span {
+			background-color: $pink;
+		}
+	}
+	.speaker {
+		margin-bottom: 1em;
+		position: relative;
+	}
+	pre.speaker-data ,
+	.speaker-avatar {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	pre.speaker-data {
+		width: auto;
+		margin-left: 50px;
+		margin-top: 50px;
+		box-shadow: none;
+		border-left: 4px solid $pink;
+		code {
+			padding: 50px;
+		}
+	}
+	.speaker-avatar {
+		border-radius: 50em;
+		width: 100px;
+		position: absolute;
+		z-index: 1;
+	}
+}
